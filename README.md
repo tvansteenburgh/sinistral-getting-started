@@ -1,3 +1,3 @@
-# Sinistral example policies
+# Sinistral - Getting Started
 
-A repository of sample policies for users getting started with Sinistral.
+A public repository of samples for users getting started with Sinistral.
