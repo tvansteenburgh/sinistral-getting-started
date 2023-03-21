@@ -1,0 +1,8 @@
+policies:
+  - name: check-encryption
+    resource: terraform.aws_sqs_queue
+    metadata:
+      category: [encryption, security]
+      severity: high
+    filters:
+      - kms_master_key_id: absent
