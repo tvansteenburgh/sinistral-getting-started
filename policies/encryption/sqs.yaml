@@ -4,6 +4,6 @@ policies:
     description: "SQS should be encrypted with KMS"
     metadata:
       category: [encryption, security]
-      severity: high
+      severity: HIGH
     filters:
       - kms_master_key_id: absent
