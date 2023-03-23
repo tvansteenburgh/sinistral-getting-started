@@ -3,7 +3,7 @@ policies:
      resource: terraform.aws_instance
      description: "EC2 should not be open to world on ssh"
      metadata:
-       severity: HIGH
+       severity: high
      filters:
         - type: traverse
           resources:
@@ -16,7 +16,7 @@ policies:
      resource: terraform.aws_instance
      description: "EC2 should not be open to world on ssh"
      metadata:
-       severity: HIGH
+       severity: high
      # terraform allows two different forms of defining permissions on a security
      # group, inline and with a separate resource. we could define this is a single
      # policy, but for readability we separate them.
@@ -30,5 +30,6 @@ policies:
            - key: ingress.cidr_blocks
              value: 0.0.0.0/0
              op: contains
-
-
+           - key: ingress.from_port
+             value: 22
+             op: eq
