@@ -13,7 +13,7 @@ resource "aws_sqs_queue" "terraform_queue" {
     Environment = "production"
   }
 
-  // This resource will fail the Sinistral scan because it's missing a KMS key.
+  // This resource will fail the Stacklet IaC scan because it's missing a KMS key.
   // Uncomment the line below to make the scan pass.
   //kms_master_key_id = "alias/aws/sqs"
 }
